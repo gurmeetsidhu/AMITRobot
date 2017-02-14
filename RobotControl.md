@@ -9,6 +9,7 @@ Ensure that all libraries are placed within respective folders to ensure proper 
 #define trig 0
 ```
 
+# Variable Decleration
 Declare constants that will be used to modular turning function that uses encoder to ensure accurate turning of robot.
 ```
 const float pi = 3.14;
@@ -22,6 +23,7 @@ int speed=130;	//Maximum speed provided to stronger wheel. Can be adjusted here.
 float ratio;	//Used to handle deciding initial turning speed of inner wheel in encoder turning function
 ```
 
+# Modular Function Decleration
 Declare distance variables for each IR sensor and distance calculation function that is used throughout the code for calculating distance from wall. This function was calibrated and developed seperately using pySerial output with polynomial regression to develop a more accurate function than online versions.
 ```
 float distanceL, distanceR, distanceC, distanceM;
@@ -247,7 +249,7 @@ double Kp, Ki, Kd;
 PID straightPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);	//Setup PID to be called later
 ```
 
-Main Setup function.
+# Main Setup function.
 ```
 void setup() {
   PololuWheelEncoders::init(10, 11, 12, 13);	//Initialize encoder ports
@@ -265,7 +267,7 @@ void setup() {
 }
 ```
 
-Main loop function.
+# Main loop function.
 ```
 int x = 0;	//Initialize x variable (used to measure unsuccessful turn attempts and used to execute correct function later)
 void loop() {
