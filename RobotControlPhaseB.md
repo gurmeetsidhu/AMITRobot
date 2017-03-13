@@ -124,7 +124,7 @@ double Kp, Ki, Kd;	//PID to control required RPM of either wheel to ensure corre
 PID PID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 ```
 
-# Main Setup function.
+# Main Setup Function
 Setup function declares all pins and initial tuning settings for PIDs.
 ```
 void setup() {
@@ -152,7 +152,7 @@ void setup() {
 }
 ```
 
-# Main loop function.
+# Main Loop Function
 ```
 void loop() {
   distances[0] = distance(1)-3;		//Distance of right wall
